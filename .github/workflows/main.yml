@@ -31,10 +31,9 @@ jobs:
         with:
           targetPlatform: StandaloneWindows64
           buildName: TestGame
-          buildsPath: "./"
 
       # Output
       - uses: actions/upload-artifact@v4
         with:
           name: Build
-          path: ./*
+          path: build
