@@ -32,9 +32,12 @@ jobs:
           targetPlatform: StandaloneWindows64
           buildName: TestGame
 
+      - name: Debug
+        run: ls
+
       # Copy game media
       - name: Copy media folder
-        run: cp -r ./Media /build
+        run: cp -r ./Media /build/Media
 
       # Output
       - uses: actions/upload-artifact@v4
