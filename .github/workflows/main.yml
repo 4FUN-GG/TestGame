@@ -21,6 +21,10 @@ jobs:
           restore-keys: |
             Library-
 
+      # Create the Build Directory
+      - name: Create build directory
+        run: mkdir -p ./build
+
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v4
@@ -32,12 +36,9 @@ jobs:
           targetPlatform: StandaloneWindows64
           buildName: TestGame
 
-      - name: Debug
-        run: ls
-
       # Copy game media
       - name: Copy media folder
-        run: cp -r ./Media /build/Media
+        run: cp -r ./Media ./build
 
       # Output
       - uses: actions/upload-artifact@v4
