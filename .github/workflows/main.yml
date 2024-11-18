@@ -30,11 +30,11 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows64
+          buildName: TestGame
+          buildsPath: "."
 
       # Output
       - uses: actions/upload-artifact@v3
         with:
           name: Build
-          buildName: TestGame
           path: build
-          buildsPath: "."
