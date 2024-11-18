@@ -1,0 +1,26 @@
+{
+    "$schema": "https://raw.githubusercontent.com/4FUN-GG/schema/refs/heads/main/schema.json",
+    "name": "Test Game",
+    "version": "1.0.0",
+    "description": "A Test game.",
+    "author": {
+        "name": "4FUN",
+        "url": "https://4fun.gg/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/4fun-gg/TestGame",
+        "branch": "main"
+    },
+    "executable": {
+        "path": "./build/TestGame.exe",
+        "arguments": ""
+    },
+    "game": {
+        "category": "Dice",
+        "minPlayers": 1,
+        "maxPlayers": 4,
+        "highscoreEnabled": false,
+        "engine": "Unity"
+    }
+}

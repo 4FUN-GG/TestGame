@@ -1,10 +1,10 @@
-name: Actions 😎
+name: Build Game Action
 
 on: [push, pull_request]
 
 jobs:
   build:
-    name: Build my project ✨
+    name: Build Game
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -32,8 +32,12 @@ jobs:
           targetPlatform: StandaloneWindows64
           buildName: TestGame
 
+      # Copy game media
+      - name: Copy media folder
+        run: cp -r ../Media /build
+
       # Output
       - uses: actions/upload-artifact@v4
         with:
           name: Build
-          path: build
+          path: build/StandaloneWindows64
